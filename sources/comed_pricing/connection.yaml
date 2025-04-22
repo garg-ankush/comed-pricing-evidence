@@ -1,0 +1,9 @@
+# This file was automatically generated
+type: gsheets
+name: comed_pricing
+options: {}
+# Advanced Options, you probably don't want to change this
+buildOptions:
+  batchSize: 1000000
+sheets:
+  comed: 1b2pYsgoA8-Mj90Pzt9RjKMbofET4y5HzfuPjq6Gqsrw
