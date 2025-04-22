@@ -23,7 +23,7 @@ jobs:
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
           ## Add and uncomment any environment variables here
-          EVIDENCE_SOURCE__comed_pricing__username: ${{ secrets.EVIDENCE_SOURCE__COMED_PRICING__CLIENT_EMAIL }}
+          EVIDENCE_SOURCE__comed_pricing__client_email: ${{ secrets.EVIDENCE_SOURCE__COMED_PRICING__CLIENT_EMAIL }}
           EVIDENCE_SOURCE__comed_pricing__private_key: ${{ secrets.EVIDENCE_SOURCE__MY_SOURCE__PRIVATE_KEY }}
         run: |
           npm run sources
