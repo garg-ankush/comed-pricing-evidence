@@ -2,7 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'main' # or whichever branch you want to deploy from
+    branches: 
+      - main # or whichever branch you want to deploy from
+  schedule:
+      - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,6 +32,9 @@ jobs:
         run: |
           npm run sources
           npm run build
+      
+      - name: Touch dummy file to ensure new build
+        run: echo "Rebuilt at $(date)" > build/${{ github.event.repository.name }}/.rebuild-log.txt
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
