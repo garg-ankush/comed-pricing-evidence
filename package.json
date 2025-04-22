@@ -8,7 +8,7 @@
     "sources": "evidence sources",
     "sources:strict": "evidence sources --strict",
     "preview": "evidence preview",
-    "build": "EVIDENCE_BUILD_DIR=./build/my-evidence-app evidence build"
+    "build": "EVIDENCE_BUILD_DIR=./build/comed-pricing-evidence evidence build"
   },
   "engines": {
     "npm": ">=7.0.0",
