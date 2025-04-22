@@ -26,10 +26,11 @@ jobs:
           EVIDENCE_SOURCE__comed_pricing__client_email: ${{ secrets.EVIDENCE_SOURCE__COMED_PRICING__CLIENT_EMAIL }}
           EVIDENCE_SOURCE__comed_pricing__private_key: ${{ secrets.EVIDENCE_SOURCE__COMED_PRICING__PRIVATE_KEY }}
         run: |
-          echo "Debugging environment variables:"
-          printenv | grep EVIDENCE_
           npm run sources
           npm run build
+          
+      - name: Check build output
+        run: ls -R build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
